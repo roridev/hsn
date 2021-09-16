@@ -10,3 +10,5 @@
 
 ## Biologia
 * [index](Biologia/index.md)
+* [Anatomia](Biologia/Anatomia/anatomia.md)
+* [Sistema Excretor](Biologia/Anatomia/Sistema Excretor/sistema excretor.md)
