@@ -4,3 +4,9 @@
 
 ## Quimica
 * [index](Quimica/index.md)
+
+## Fisica
+* [index](Fisica/index.md)
+
+## Biologia
+* [index](Biologia/index.md)
