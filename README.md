@@ -12,6 +12,7 @@ this is a mere compendium of my high school notes. it will mostly be in [**portu
 * capitalization is forbidden unless it is a name or a search term.
 * search terms **must** be linked.
 * use latex as much as possible instead of images, images are crappy and raster, tex is good and vector.
+* *if* you need to add an image `under res/png/`, **please** make a latex version `under res/tex/` from it. examples on how to do will be given.
 * write shit in portuguese. i dont care about anything else.
 
 ### why this mess was written in english if the whole thing is in portuguese
