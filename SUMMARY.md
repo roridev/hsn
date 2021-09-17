@@ -12,3 +12,4 @@
 * [index](Biologia/index.md)
 * [Anatomia](Biologia/Anatomia/anatomia.md)
 * [Sistema Excretor](Biologia/Anatomia/Sistema Excretor/sistema excretor.md)
+* [Resíduos Nitrogenados](Biologia/Anatomia/Sistema Excretor/residuos nitrogenados.md)

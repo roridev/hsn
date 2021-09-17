@@ -15,7 +15,7 @@ parte de [Anatomia](../anatomia.md)
 ## responsavel por
 - filtragem do sangue
 - regulação do teor de água e sais minerais
-- eliminação de [Resíduos Nitrogenados]() formados durante o [Metabolismo Celular]()
+- eliminação de [Resíduos Nitrogenados](residuos nitrogenados.md) formados durante o [Metabolismo Celular]()
 
 
 

@@ -1,0 +1,77 @@
+\documentclass[convert={density=300, outext=.png}]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\pagestyle{empty}
+\begin{document}
+\tikzset{
+  basic/.style  = {draw, text width=2cm, drop shadow, font=\sffamily, rectangle},
+  root/.style   =  {basic, rounded corners=2pt, thin, align=center,fill=green!30},
+  level 2/.style = {basic, rounded corners=6pt, thin,align=center, fill=green!60,
+                   text width=8em},
+  level 3/.style = {basic, thin, align=left, fill=pink!60, text width=6.5em},
+  level 4/.style = {basic, thin, align=left, fill=blue!40, text width=8.5em}
+}
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=40mm},
+  edge from parent/.style={->,draw},
+  >=latex]
+
+\node [root] {Resíduos Nitrogenados}
+	child { node [level 2] (am) {amônia}}
+	child { node [level 2] (ur) {uréia}}
+	child { node [level 2] (au) {ácido úrico}}
+;
+
+\begin{scope}[every node/.style={level 3}]
+\node [below of = am, xshift=15pt] (am1) {alta toxicidade, alta solubilidade};
+\node [below of = am1, yshift=-15pt] (am2) {adaptado ao meio aquatico};
+\node [below of = am2, yshift=-15pt] (am3) {exemplos};
+\node [below of = ur, xshift=15pt] (ur1) {media toxicidade, media solubilidade};
+\node [below of = ur1, yshift=-15pt] (ur2) {adaptado ao ambiente terrestre};
+\node [below of = ur2, yshift=-15pt] (ur3) {exemplos};
+
+\node [below of = au, xshift=15pt] (au1) {baixa toxicidade, baixa solubilidade};
+\node [below of = au1, yshift=-15pt] (au2) {adaptado ao meio terrestre};
+\node [below of = au2, yshift=-15pt] (au3) {exemplos};
+\end{scope}
+
+\begin{scope}[every node/.style={level 4}]
+\node [below of= am3, xshift=30pt] (am31) {moluscos};
+\node [below of= am31] (am32) {larvas de anfíbios};
+\node [below of= am32] (am33) {peixes ósseos};
+\node [below of= am33] (am34) {crustáceos};
+\node [below of= am34] (am35) {cnidários};
+\node [below of= am35] (am36) {equinodermos};
+
+
+\node [below of= ur3, xshift=30pt] (ur31) {anelídeos};
+\node [below of= ur31] (ur32) {mamíferos};
+\node [below of= ur32] (ur33) {anfíbios adultos};
+\node [below of= ur33] (ur34) {peixes cartilaginosos};
+
+\node [below of= au3, xshift=30pt] (au31) {aves};
+\node [below of= au31] (au32) {répteis};
+\node [below of= au32] (au33) {insetos};
+
+\end{scope}
+
+\foreach \value in {1,2,3}
+	\draw[->] (am.195) |- (am\value.west);
+
+\foreach \value in {1,2,3}
+	\draw[->] (ur.195) |- (ur\value.west);
+
+\foreach \value in {1,2,3}
+	\draw[->] (au.195) |- (au\value.west);
+
+\foreach \value in {1,...,6}
+	\draw[->] (am3.200) |- (am3\value.west);
+
+\foreach \value in {1,...,4}
+	\draw[->] (ur3.200) |- (ur3\value.west);
+
+\foreach \value in {1,2,3}
+	\draw[->] (au3.200) |- (au3\value.west);
+
+\end{tikzpicture}
+\end{document}
